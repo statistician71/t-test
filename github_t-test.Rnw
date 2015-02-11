@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{color}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \LARGE
+       \textbf{\textcolor{magenta}{Compare the Control and Treatment groups using two sample t-test}}
+        
+        
+      
+        
+        
+        
+     \end{center}
+\end{titlepage}
+
+
+
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (General):}}
+<<echo=FALSE>>=
+Control = c(1633,2594,1077)
+Treat = c(1972,1978,1048)
+t.test(Control,Treat,alternative="less", var.equal=TRUE)
+@
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.5703}) it can be said that the Control and Treatment group have no significant difference.
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (Mob):}}
+<<echo=FALSE>>=
+Control = c(31,122,45)
+Treat = c(82,65,56)
+t.test(Control,Treat,alternative="less", var.equal=TRUE)
+@
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.4787}) it can be said that the Control and Treatment group have no significant difference.
+
+
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (WDes):}}
+<<echo=FALSE>>=
+Control = c(63,191,87)
+Treat = c(138,166,59)
+t.test(Control,Treat,alternative="less", var.equal=TRUE)
+@
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.446}) it can be said that the Control and Treatment group have no significant difference.
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (DE):}}
+<<echo=FALSE>>=
+Control = c(597,147,19)
+Treat = c(506,73,28)
+t.test(Control,Treat,alternative="less", var.equal=TRUE)
+@
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.5831}) it can be said that the Control and Treatment group have no significant difference.
+
+
+
+\bigskip
+
+
+
+
+\textbf{\textcolor{red}{Notes:}}\\
+
+Here, we have total three category for each of the situation (e.g. General, Mob, WDes and DE). The categories are "Low", "Medium" and "High". I think we should use the t-test for each of the category for each of the situation separately. To do this we need at least two observation for each of the categories.
+ 
+
+\end{document}

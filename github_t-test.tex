@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{Sweave}
+\begin{document}
+\input{github_t-test-concordance}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \LARGE
+       \textbf{\textcolor{magenta}{Compare the Control and Treatment groups using two sample t-test}}
+        
+        
+      
+        
+        
+        
+     \end{center}
+\end{titlepage}
+
+
+
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (General):}}
+\begin{Schunk}
+\begin{Soutput}
+	Two Sample t-test
+
+data:  Control and Treat
+t = 0.1888, df = 4, p-value = 0.5703
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+    -Inf 1253.62
+sample estimates:
+mean of x mean of y 
+     1768      1666 
+\end{Soutput}
+\end{Schunk}
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.5703}) it can be said that the Control and Treatment group have no significant difference.
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (Mob):}}
+\begin{Schunk}
+\begin{Soutput}
+	Two Sample t-test
+
+data:  Control and Treat
+t = -0.0569, df = 4, p-value = 0.4787
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+     -Inf 60.79479
+sample estimates:
+mean of x mean of y 
+ 66.00000  67.66667 
+\end{Soutput}
+\end{Schunk}
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.4787}) it can be said that the Control and Treatment group have no significant difference.
+
+
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (WDes):}}
+\begin{Schunk}
+\begin{Soutput}
+	Two Sample t-test
+
+data:  Control and Treat
+t = -0.1447, df = 4, p-value = 0.446
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+     -Inf 100.7293
+sample estimates:
+mean of x mean of y 
+ 113.6667  121.0000 
+\end{Soutput}
+\end{Schunk}
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.446}) it can be said that the Control and Treatment group have no significant difference.
+
+
+\section*{\textcolor{blue}{Compare the Control and Treament group for (DE):}}
+\begin{Schunk}
+\begin{Soutput}
+	Two Sample t-test
+
+data:  Control and Treat
+t = 0.2239, df = 4, p-value = 0.5831
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+     -Inf 547.1329
+sample estimates:
+mean of x mean of y 
+ 254.3333  202.3333 
+\end{Soutput}
+\end{Schunk}
+\textbf{Comments:} So, according to the p-value (\textcolor{red}{0.5831}) it can be said that the Control and Treatment group have no significant difference.
+
+
+
+\bigskip
+
+
+
+
+\textbf{\textcolor{red}{Notes:}}\\
+
+Here, we have total three category for each of the situation (e.g. General, Mob, WDes and DE). The categories are "Low", "Medium" and "High". I think we should use the t-test for each of the category for each of the situation separately. To do this we need at least two observation for each of the categories.
+ 
+
+\end{document}
